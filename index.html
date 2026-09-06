@@ -1,163 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Embodied Alignment Suite</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Embodied Alignment Suite | Premium Domains</title>
   <style>
     :root {
-      --bg: #05070D;
-      --panel: rgba(10, 14, 25, 0.75);
-      --line: rgba(255,255,255,0.07);
-      --text: #F1F5F9;
-      --muted: #94A3B8;
-      --soft: #CBD5E1;
-      --turquoise: #22D3EE;
-      --text-dim: #94A3B8;
-      --max-width: 980px;
+      --turquoise: #00e5c7;
+      --turquoise-dim: #00b89e;
+      --bg: #050505;
+      --card-bg: #0d0d0d;
+      --text: #e8e8e8;
+      --text-dim: #a0a0a0;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: radial-gradient(circle at 50% -10%, rgba(34,211,238,0.035), transparent 35%), var(--bg);
+      background: var(--bg);
       color: var(--text);
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
-      min-height: 100vh;
-      overflow-x: hidden;
+      background-image: 
+        linear-gradient(rgba(0, 229, 199, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 199, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
     }
 
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-
-    /* LOGO LİSTESİ */
-    .logo-list {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      padding: 60px 0;
-      align-items: center;
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    .logo-item {
+    /* Hero */
+    .hero {
       text-align: center;
-      max-width: 800px;
-      width: 100%;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 40px 30px;
-      backdrop-filter: blur(12px);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      padding: 100px 0 40px;
     }
 
-    .logo-item:hover {
-      transform: translateY(-5px);
-      border-color: rgba(34,211,238,0.35);
-    }
-
-    .logo-item img {
-      max-width: 600px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .logo-item h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.8px;
-      margin-bottom: 10px;
-    }
-
-    .logo-item p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-    }
-
-    .logo-item a {
+    .badge {
       display: inline-block;
-      padding: 10px 20px;
-      border-radius: 40px;
-      text-decoration: none;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      padding: 6px 16px;
+      border: 1px solid var(--turquoise);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
       color: var(--turquoise);
-      border: 1px solid rgba(34,211,238,0.2);
-      background: rgba(34,211,238,0.04);
-      transition: all 0.3s ease;
+      margin-bottom: 28px;
+      text-transform: uppercase;
     }
 
-    .logo-item a:hover {
-      background: rgba(34,211,238,0.1);
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #00e5c7, #00b4d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--turquoise);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #00ffd5;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid #333;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
       border-color: var(--turquoise);
+      color: var(--turquoise);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.82rem;
+    }
+
+    .btn-sedo {
+      background: #1a1a1a;
+      border: 1px solid #333;
       color: #fff;
     }
 
-    /* FOOTER */
+    .btn-sedo:hover {
+      border-color: var(--turquoise);
+      color: var(--turquoise);
+    }
+
+    .btn-afternic {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #fff;
+    }
+
+    .btn-afternic:hover {
+      border-color: var(--turquoise);
+      color: var(--turquoise);
+    }
+
+    /* Section */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text-dim);
+      margin-bottom: 50px;
+    }
+
+    /* Cards Grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #1a1a1a;
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: all 0.25s;
+    }
+
+    .card:hover {
+      border-color: rgba(0, 229, 199, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .card-number {
+      font-size: 0.8rem;
+      color: var(--turquoise);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .card h3 span {
+      color: var(--turquoise);
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+      min-height: 48px;
+    }
+
+    .price {
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      color: #ccc;
+    }
+
+    .price span {
+      color: var(--turquoise);
+      font-size: 0.85rem;
+    }
+
+    .card-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: linear-gradient(135deg, #0a1a18, #0d0d0d);
+      border: 1px solid rgba(0, 229, 199, 0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: 1.9rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      color: var(--text-dim);
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 40px 0 60px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 60px;
+      padding: 40px 0;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #111;
     }
-    footer a { color: var(--turquoise); text-decoration: none; }
+
+    footer a {
+      color: var(--turquoise);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.4rem; }
+      .hero { padding: 70px 0 30px; }
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <!-- 4 LOGO BÜYÜK VE ORTALI -->
-  <div class="logo-list">
-    
-    <!-- Logo 1: Humanoid -->
-    <div class="logo-item">
-      <img src="alignhumanoid.png" alt="AlignHumanoid">
-      <h2>AlignHumanoid</h2>
-      <p>Safeguarding Embodied Intelligence</p>
-      <a href="https://sedo.com/search/?keyword=alignhumanoid.com" target="_blank">Buy on Sedo</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">Premium Domain Portfolio</div>
+      <h1>The <span>Embodied</span> Suite</h1>
+      <p>
+        Four premium domains for the physical frontier of aligned intelligence.<br>
+        <strong>Humanoid</strong> · <strong>Embodied</strong> · <strong>Robotic</strong> · <strong>Kinetic</strong>
+      </p>
+      <div class="hero-cta">
+        <a href="#domains" class="btn btn-primary">View Domains</a>
+        <a href="#package" class="btn btn-outline">Package Deal</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Logo 2: Embodied -->
-    <div class="logo-item">
-      <img src="alignembodied.png" alt="AlignEmbodied">
-      <h2>AlignEmbodied</h2>
-      <p>Precision Control for Physical AI</p>
-      <a href="https://sedo.com/search/?keyword=alignembodied.com" target="_blank">Buy on Sedo</a>
+  <!-- LOGOS - BÜYÜK VE ORTALI (YENİ EKLENDİ) -->
+  <section style="padding: 40px 0 20px;">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
+        
+        <!-- Logo 1 -->
+        <div style="text-align: center; max-width: 700px; width: 100%;">
+          <img src="alignhumanoid.png" alt="AlignHumanoid" style="max-width: 600px; width: 100%; height: auto;">
+        </div>
+
+        <!-- Logo 2 -->
+        <div style="text-align: center; max-width: 700px; width: 100%;">
+          <img src="alignembodied.png" alt="AlignEmbodied" style="max-width: 600px; width: 100%; height: auto;">
+        </div>
+
+        <!-- Logo 3 -->
+        <div style="text-align: center; max-width: 700px; width: 100%;">
+          <img src="alignrobotic.png" alt="AlignRobotic" style="max-width: 600px; width: 100%; height: auto;">
+        </div>
+
+        <!-- Logo 4 -->
+        <div style="text-align: center; max-width: 700px; width: 100%;">
+          <img src="alignkinetic.png" alt="AlignKinetic" style="max-width: 600px; width: 100%; height: auto;">
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <!-- Logo 3: Robotic -->
-    <div class="logo-item">
-      <img src="alignrobotic.png" alt="AlignRobotic">
-      <h2>AlignRobotic</h2>
-      <p>Governing Autonomous Robotics</p>
-      <a href="https://sedo.com/search/?keyword=alignrobotic.com" target="_blank">Buy on Sedo</a>
+  <!-- Domains -->
+  <section id="domains">
+    <div class="container">
+      <h2 class="section-title">Four Domains. One Physical Vision.</h2>
+      <p class="section-sub">Built for robotics, embodied AI and real-world aligned systems.</p>
+
+      <div class="cards">
+
+        <!-- 01 Humanoid -->
+        <div class="card">
+          <div class="card-number">01</div>
+          <h3>Align<span>Humanoid</span></h3>
+          <p>Aligning intelligence in human-form robots and anthropomorphic systems.</p>
+          <div class="price">Inquire <span>/ BIN</span></div>
+          <div class="card-buttons">
+            <a href="https://sedo.com/search/?keyword=alignhumanoid.com" target="_blank" class="btn btn-sm btn-sedo">Buy on Sedo</a>
+            <a href="https://www.afternic.com/domain/alignhumanoid.com" target="_blank" class="btn btn-sm btn-afternic">Buy on Afternic</a>
+          </div>
+        </div>
+
+        <!-- 02 Embodied -->
+        <div class="card">
+          <div class="card-number">02</div>
+          <h3>Align<span>Embodied</span></h3>
+          <p>Precision control and alignment for physical, real-world AI systems.</p>
+          <div class="price">Inquire <span>/ BIN</span></div>
+          <div class="card-buttons">
+            <a href="https://sedo.com/search/?keyword=alignembodied.com" target="_blank" class="btn btn-sm btn-sedo">Buy on Sedo</a>
+            <a href="https://www.afternic.com/domain/alignembodied.com" target="_blank" class="btn btn-sm btn-afternic">Buy on Afternic</a>
+          </div>
+        </div>
+
+        <!-- 03 Robotic -->
+        <div class="card">
+          <div class="card-number">03</div>
+          <h3>Align<span>Robotic</span></h3>
+          <p>Governing autonomous robotics with aligned decision frameworks.</p>
+          <div class="price">Inquire <span>/ BIN</span></div>
+          <div class="card-buttons">
+            <a href="https://sedo.com/search/?keyword=alignrobotic.com" target="_blank" class="btn btn-sm btn-sedo">Buy on Sedo</a>
+            <a href="https://www.afternic.com/domain/alignrobotic.com" target="_blank" class="btn btn-sm btn-afternic">Buy on Afternic</a>
+          </div>
+        </div>
+
+        <!-- 04 Kinetic -->
+        <div class="card">
+          <div class="card-number">04</div>
+          <h3>Align<span>Kinetic</span></h3>
+          <p>Harmonizing physical motion, dynamics and real-time control.</p>
+          <div class="price">Inquire <span>/ BIN</span></div>
+          <div class="card-buttons">
+            <a href="https://sedo.com/search/?keyword=alignkinetic.com" target="_blank" class="btn btn-sm btn-sedo">Buy on Sedo</a>
+            <a href="https://www.afternic.com/domain/alignkinetic.com" target="_blank" class="btn btn-sm btn-afternic">Buy on Afternic</a>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <!-- Logo 4: Kinetic -->
-    <div class="logo-item">
-      <img src="alignkinetic.png" alt="AlignKinetic">
-      <h2>AlignKinetic</h2>
-      <p>Harmonizing Physical Motion &amp; Control</p>
-      <a href="https://sedo.com/search/?keyword=alignkinetic.com" target="_blank">Buy on Sedo</a>
+  <!-- Package CTA -->
+  <section id="package">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Own the Complete Embodied Suite</h2>
+        <p>
+          Four premium domains forming a cohesive portfolio for 
+          humanoid robotics, embodied intelligence, autonomous systems and kinetic control.
+        </p>
+        <div class="hero-cta">
+          <a href="https://sedo.com/search/?keyword=alignhumanoid.com" target="_blank" class="btn btn-primary">Inquire on Sedo</a>
+          <a href="https://www.afternic.com/domain/alignhumanoid.com" target="_blank" class="btn btn-outline">Inquire on Afternic</a>
+        </div>
+        <p style="margin-top:20px; font-size:0.95rem; color:var(--turquoise);">
+          Package inquiries welcome
+        </p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</div>
+  <!-- Link to Core Suite -->
+  <section style="padding: 40px 0 60px; text-align: center;">
+    <div class="container">
+      <p style="color: var(--text-dim); margin-bottom: 12px;">
+        Looking for the cognitive & neural alignment domains?
+      </p>
+      <a href="https://www.aligncortex.com" class="btn btn-outline">
+        Visit the Core Alignment Suite →
+      </a>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    The Embodied Alignment Suite — Premium domains for physical AI &amp; robotics.<br>
-    Listed on Sedo &amp; Afternic<br><br>
-    <a href="https://www.aligncortex.com">Core Alignment Suite</a>
-  </div>
-</footer>
+  <footer>
+    <div class="container">
+      The Embodied Alignment Suite — Premium domains for physical AI & robotics.<br>
+      Listed on Sedo &amp; Afternic<br><br>
+      <a href="https://www.aligncortex.com">Core Alignment Suite</a>
+    </div>
+  </footer>
 
 </body>
 </html>
