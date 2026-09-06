@@ -165,17 +165,29 @@
       gap: 24px;
     }
 
+    /* LOGO KARTLARIN ÜSTÜNDE */
     .card {
       background: var(--card-bg);
       border: 1px solid #1a1a1a;
       border-radius: 16px;
       padding: 28px 24px;
       transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .card:hover {
       border-color: rgba(0, 229, 199, 0.35);
       transform: translateY(-4px);
+    }
+
+    .card-logo {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
     }
 
     .card-number {
@@ -216,6 +228,7 @@
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     /* CTA Box */
@@ -276,35 +289,6 @@
     </div>
   </section>
 
-  <!-- LOGOS - BÜYÜK VE ORTALI (YENİ EKLENDİ) -->
-  <section style="padding: 40px 0 20px;">
-    <div class="container">
-      <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
-        
-        <!-- Logo 1 -->
-        <div style="text-align: center; max-width: 700px; width: 100%;">
-          <img src="alignhumanoid.png" alt="AlignHumanoid" style="max-width: 600px; width: 100%; height: auto;">
-        </div>
-
-        <!-- Logo 2 -->
-        <div style="text-align: center; max-width: 700px; width: 100%;">
-          <img src="alignembodied.png" alt="AlignEmbodied" style="max-width: 600px; width: 100%; height: auto;">
-        </div>
-
-        <!-- Logo 3 -->
-        <div style="text-align: center; max-width: 700px; width: 100%;">
-          <img src="alignrobotic.png" alt="AlignRobotic" style="max-width: 600px; width: 100%; height: auto;">
-        </div>
-
-        <!-- Logo 4 -->
-        <div style="text-align: center; max-width: 700px; width: 100%;">
-          <img src="alignkinetic.png" alt="AlignKinetic" style="max-width: 600px; width: 100%; height: auto;">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Domains -->
   <section id="domains">
     <div class="container">
@@ -315,6 +299,7 @@
 
         <!-- 01 Humanoid -->
         <div class="card">
+          <img src="alignhumanoid.png" alt="AlignHumanoid" class="card-logo">
           <div class="card-number">01</div>
           <h3>Align<span>Humanoid</span></h3>
           <p>Aligning intelligence in human-form robots and anthropomorphic systems.</p>
@@ -327,6 +312,7 @@
 
         <!-- 02 Embodied -->
         <div class="card">
+          <img src="alignembodied.png" alt="AlignEmbodied" class="card-logo">
           <div class="card-number">02</div>
           <h3>Align<span>Embodied</span></h3>
           <p>Precision control and alignment for physical, real-world AI systems.</p>
@@ -339,6 +325,7 @@
 
         <!-- 03 Robotic -->
         <div class="card">
+          <img src="alignrobotic.png" alt="AlignRobotic" class="card-logo">
           <div class="card-number">03</div>
           <h3>Align<span>Robotic</span></h3>
           <p>Governing autonomous robotics with aligned decision frameworks.</p>
@@ -351,6 +338,7 @@
 
         <!-- 04 Kinetic -->
         <div class="card">
+          <img src="alignkinetic.png" alt="AlignKinetic" class="card-logo">
           <div class="card-number">04</div>
           <h3>Align<span>Kinetic</span></h3>
           <p>Harmonizing physical motion, dynamics and real-time control.</p>
